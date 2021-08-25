@@ -1,0 +1,186 @@
+
+@font-face{
+	font-family: 'Open Sans', sans-serif;
+	src:  url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-size: 24px;
+	font-family: 'Open Sans',Arial,sans-serif;
+}
+nav div a{
+	text-decoration: none;
+	padding: 8px 24px;
+	background: rgb(137,137,137);
+	color: #fff;
+	margin: 10px;
+	font-size: 0.6rem;
+	transition: all ease-in-out 0.3s;
+}
+nav div a:hover{
+	background: rgba(137,137,137,0.6);
+	padding: 12px 26px;
+}
+.grid{
+	padding: 10px;
+	display: grid;
+	height: 100vh;
+	grid-template-columns:0.3fr 0.7fr ;
+	grid-template-rows: 0.2fr 0.7fr 0.2fr;
+	grid-template-areas: 
+	"logo logo" 
+	"sidebar main"
+	"sidebar footer";
+	grid-gap: 10px;
+		justify-content: center;
+}
+
+.nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	grid-area: logo;
+	padding: 10px;
+
+}
+
+.main{
+	
+	grid-area: main;
+	overflow: auto;
+	padding: 10px;
+
+}
+
+.main p{
+	line-height: 32px;
+	margin-bottom: 10px;
+}
+.main h1{
+	font-size: 1.8rem;
+}
+
+.aside{
+
+	grid-area: sidebar;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+ .ad{
+	padding: 16px 32px;
+	background: lightblue;
+	margin: 10px;
+	text-align: center;
+	flex-basis: 20%;
+}
+.megaAd{
+	padding: 16px 32px;
+	background: lightblue;
+	margin: 10px;
+	flex-basis: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.footer{
+
+	grid-area: footer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+
+}
+.social-liks a{
+	font-size: 0.8rem;
+	text-decoration: none;
+	padding: 8px 16px;
+	color: #333;
+}
+
+.social-liks a:hover{
+	text-decoration: underline;
+}
+.autor p{
+	font-size: 0.8rem;
+
+}
+
+.estilo1{
+	border-radius: 20px;
+	margin: 10px;
+	background: #eef;
+}
+
+@media screen and (max-width: 800px){
+	.grid{
+	grid-template-columns:0.3fr 0.7fr;
+	grid-template-rows: 0.6fr 2fr 1fr 0.3fr;
+	grid-template-areas:
+	"logo logo" 
+	" main main"
+	"sidebar sidebar" 
+	"footer footer";
+	}
+	.main{
+		grid-area: main;
+	}
+
+	.nav{
+		gird-area: logo;
+	}
+	.ad{
+		display: none;
+	}
+
+	.aside{
+		grid-area: sidebar;
+		display: flex;
+		justify-content: center;
+	}
+	.footer{
+		grid-area: footer;
+	}
+
+	@media  screen and (max-width: 500px) {
+	.grid{
+	grid-template-columns:0.3fr 0.7fr;
+	grid-template-rows: 0.2fr 1fr 0.2fr;
+	grid-template-areas:
+	"logo logo" 
+	" main main"
+	"footer footer";
+	}
+		.nav{
+			
+			flex-flow: column wrap;
+			justify-content: space-around;
+			padding:10px;		
+		}
+
+		.main h1{
+			font-size: 1.8rem;
+		}
+		.footer{
+			flex-flow: column wrap;
+			justify-content: space-around;
+		}
+		.autor{
+			order: 2;
+		}
+		.social-liks{
+			order: 1;
+		}
+		.aside{
+			display: none;
+		}
+	}
+
+}

@@ -13,7 +13,7 @@
 }
 nav div a{
 	text-decoration: none;
-	padding: 8px 24px;
+	padding: 1vh 3vw;
 	background: rgb(137,137,137);
 	color: #fff;
 	margin: 10px;
@@ -22,7 +22,6 @@ nav div a{
 }
 nav div a:hover{
 	background: rgba(137,137,137,0.6);
-	padding: 12px 26px;
 }
 .grid{
 	padding: 10px;
@@ -72,7 +71,7 @@ nav div a:hover{
 }
 
  .ad{
-	padding: 16px 32px;
+	padding: 2vh 3vw;
 	background: lightblue;
 	margin: 10px;
 	text-align: center;
@@ -113,13 +112,21 @@ nav div a:hover{
 
 }
 
+/*
+Problema margin
+
+*/
 .estilo1{
 	border-radius: 20px;
-	margin: 10px;
 	background: #eef;
 }
+@media screen and (max-height: 500px){
 
-@media screen and (max-width: 800px){
+	
+}
+
+@media screen and (max-width: 800px)
+{
 	.grid{
 	grid-template-columns:0.3fr 0.7fr;
 	grid-template-rows: 0.6fr 2fr 1fr 0.3fr;
@@ -148,8 +155,10 @@ nav div a:hover{
 	.footer{
 		grid-area: footer;
 	}
+	
 
-	@media  screen and (max-width: 500px) {
+	}
+	@media screen and (max-width: 500px) {
 	.grid{
 	grid-template-columns:0.3fr 0.7fr;
 	grid-template-rows: 0.2fr 1fr 0.2fr;
@@ -163,6 +172,9 @@ nav div a:hover{
 			flex-flow: column wrap;
 			justify-content: space-around;
 			padding:10px;		
+		}
+		.social-liks a,.autor p{
+			font-size: 0.6rem;
 		}
 
 		.main h1{

@@ -16,7 +16,7 @@ nav div a{
 	padding: 1vh 3vw;
 	background: rgb(137,137,137);
 	color: #fff;
-	margin: 10px;
+
 	font-size: 0.6rem;
 	transition: all ease-in-out 0.3s;
 }
@@ -27,6 +27,8 @@ nav div a:hover{
 	padding: 10px;
 	display: grid;
 	height: 100vh;
+	min-width: 300px;
+	min-height: 350px;
 	grid-template-columns:0.3fr 0.7fr ;
 	grid-template-rows: 0.2fr 0.7fr 0.2fr;
 	grid-template-areas: 
@@ -120,10 +122,7 @@ Problema margin
 	border-radius: 20px;
 	background: #eef;
 }
-@media screen and (max-height: 500px){
 
-	
-}
 
 @media screen and (max-width: 800px)
 {
@@ -161,7 +160,7 @@ Problema margin
 	@media screen and (max-width: 500px) {
 	.grid{
 	grid-template-columns:0.3fr 0.7fr;
-	grid-template-rows: 0.2fr 1fr 0.2fr;
+	grid-template-rows: 0.1fr 1fr 0.1fr;
 	grid-template-areas:
 	"logo logo" 
 	" main main"
